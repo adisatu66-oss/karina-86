@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeri kegiatan pembelajaran, keagamaan, olahraga, dan pengembangan diri siswa SMPIT Nur Hidayah.">
+    <title>Kegiatan Sekolah | SMPIT Nur Hidayah</title>
+
+    <link rel="stylesheet" href="gaya.css">
+    <link rel="stylesheet" href="kegiatan.css">
+</head>
+<body>
+
+    <!-- HEADER BERITA -->
+    <div class="kepala-atas">
+        <div class="wadah kepala-atas-dalam">
+            <span class="label-berita">INFO SEKOLAH</span>
+
+            <div class="teks-berjalan">
+                Selamat datang di website SMPIT Nur Hidayah.
+                Bersama membangun generasi Islami, berprestasi, dan mandiri.
+            </div>
+
+            <div class="sosial">
+                <a href="https://www.instagram.com/" aria-label="Instagram">IG</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">FB</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">YT</a>
+                <a href="https://www.tiktok.com/" aria-label="TikTok">TT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER UTAMA -->
+    <header class="kepala-utama">
+        <div class="wadah kepala-utama-dalam">
+
+            <a href="index.html" class="identitas-sekolah">
+               <img src="logo smpit.png"
+     alt="Logo SMPIT Nur Hidayah"
+     class="logo-sekolah">
+                <div class="teks-identitas">
+                    <h1>SMPIT NUR HIDAYAH</h1>
+                    <p>Membentuk Generasi Qurani</p>
+                </div>
+                    
+            </a>
+
+            <button class="tombol-menu" id="tombolMenu"
+                    aria-label="Buka menu navigasi"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navigasi" id="navigasiUtama">
+                <a href="index.html">Beranda</a>
+
+                <div class="menu-turun">
+                    <button class="tombol-turun" type="button">
+                        Tentang Kami ▾
+                    </button>
+                    <div class="isi-turun">
+                        <a href="profil.html">Profil Sekolah</a>
+                        <a href="sambutan.html">Sambutan Kepala Sekolah</a>
+                    </div>
+                </div>
+
+                <a href="fasilitas.html">Fasilitas</a>
+                <a href="kegiatan.html" class="aktif">Kegiatan</a>
+                <a href="prestasi.html">Prestasi</a>
+                <a href="kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO KEGIATAN -->
+        <section class="hero-kegiatan">
+            <div class="lapisan-kegiatan"></div>
+
+            <div class="wadah isi-hero-kegiatan">
+                <span class="label-hero">AKTIF, KREATIF, BERPRESTASI</span>
+
+                <h2>Kegiatan Sekolah</h2>
+
+                <p>
+                    Belajar bukan hanya tentang pelajaran di kelas,
+                    tetapi juga tentang pengalaman, kebersamaan,
+                    kreativitas, dan pembentukan karakter.
+                </p>
+
+                <div class="jalur-kegiatan">
+                    <a href="index.html">Beranda</a>
+                    <span>/</span>
+                    <span>Kegiatan</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PENGANTAR -->
+        <section class="pengantar-kegiatan wadah">
+            <div class="teks-pengantar-kegiatan">
+                <span class="label-bagian">CERITA KEGIATAN KAMI</span>
+
+                <h2>Tempat Siswa Belajar dan Berkembang</h2>
+
+                <p>
+                    Kegiatan sekolah menjadi kesempatan bagi siswa
+                    untuk menambah ilmu, melatih kedisiplinan,
+                    mempererat persahabatan, serta mengembangkan
+                    bakat dan minat. Melalui berbagai aktivitas,
+                    siswa diharapkan tumbuh menjadi pribadi yang
+                    percaya diri, bertanggung jawab, dan berakhlak baik.
+                </p>
+            </div>
+
+            <div class="hiasan-kegiatan">
+                <div class="item-hiasan">
+                    <span class="ikon-hiasan">✦</span>
+                    <div>
+                        <h3>Belajar</h3>
+                        <p>Menambah ilmu dan pengalaman</p>
+                    </div>
+                </div>
+
+                <div class="item-hiasan">
+                    <span class="ikon-hiasan">♡</span>
+                    <div>
+                        <h3>Bersama</h3>
+                        <p>Melatih kerja sama dan kepedulian</p>
+                    </div>
+                </div>
+
+                <div class="item-hiasan">
+                    <span class="ikon-hiasan">★</span>
+                    <div>
+                        <h3>Berkarya</h3>
+                        <p>Mengembangkan potensi diri</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERI KEGIATAN -->
+        <section class="bagian-galeri-kegiatan">
+            <div class="wadah">
+
+                <div class="judul-kegiatan">
+                    <span class="label-bagian">GALERI KEGIATAN</span>
+                    <h2>Aktivitas Seru di Sekolah</h2>
+                    <p>
+                        Pilih kategori kegiatan untuk menemukan
+                        aktivitas yang ingin kamu lihat.
+                    </p>
+                </div>
+
+                <!-- FILTER -->
+                <div class="filter-kegiatan" role="group"
+                     aria-label="Filter kategori kegiatan">
+
+                    <button type="button"
+                            class="tombol-filter aktif"
+                            data-filter="semua"
+                            aria-pressed="true">
+                        Semua
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="akademik"
+                            aria-pressed="false">
+                        Akademik
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="keagamaan"
+                            aria-pressed="false">
+                        Keagamaan
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="olahraga"
+                            aria-pressed="false">
+                        Olahraga
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="organisasi"
+                            aria-pressed="false">
+                        Organisasi
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="sosial"
+                            aria-pressed="false">
+                        Sosial
+                    </button>
+                </div>
+
+                <!-- DAFTAR KARTU KEGIATAN -->
+                <div class="kisi-kegiatan" id="kisiKegiatan">
+
+                    <!-- KEGIATAN 1 -->
+                    <article class="kartu-kegiatan"
+                             data-kategori="akademik">
+                        <div class="gambar-kegiatan">
+                            <img
+                                src="bel kelas.jpg"
+                                alt="Siswa mengikuti kegiatan pembelajaran"
+                                loading="lazy">
+                            <span class="label-kategori">Akademik</span>
+                        </div>
+
+                        <div class="isi-kartu-kegiatan">
+                            <span class="nomor-kegiatan">KEGIATAN 01</span>
+                            <h3>Pembelajaran di Kelas</h3>
+                            <p>
+                                Siswa belajar bersama guru, berdiskusi,
+                                dan memahami materi melalui kegiatan
+                                pembelajaran yang aktif.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- KEGIATAN 2 -->
+                    <article class="kartu-kegiatan"
+                             data-kategori="keagamaan">
+                        <div class="gambar-kegiatan">
+                            <img
+                                src="IMG_5450.JPG"
+                                alt="Al-Qur'an untuk kegiatan keagamaan"
+                                loading="lazy">
+                            <span class="label-kategori">Keagamaan</span>
+                        </div>
+
+                        <div class="isi-kartu-kegiatan">
+                            <span class="nomor-kegiatan">KEGIATAN 02</span>
+                            <h3>Tahfiz dan Tadarus Al-Qur'an</h3>
+                            <p>
+                                Kegiatan untuk membiasakan siswa membaca,
+                                menghafal, dan mencintai Al-Qur'an.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- KEGIATAN 3 -->
+                    <article class="kartu-kegiatan"
+                             data-kategori="olahraga">
+                        <div class="gambar-kegiatan">
+                            <img
+                                src="keg bas.jpg"
+                                alt="Aktivitas olahraga bersama"
+                                loading="lazy">
+                            <span class="label-kategori">Olahraga</span>
+                        </div>
+
+                        <div class="isi-kartu-kegiatan">
+                            <span class="nomor-kegiatan">KEGIATAN 03</span>
+                            <h3>Olahraga Bersama</h3>
+                            <p>
+                                Melatih kebugaran, sportivitas, kedisiplinan,
+                                dan semangat bekerja sama melalui olahraga.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- KEGIATAN 4 -->
+                    <article class="kartu-kegiatan"
+                             data-kategori="organisasi">
+                        <div class="gambar-kegiatan">
+                            <img
+                                src="IMG_5839.JPG"
+                                alt="Sekelompok orang mengikuti kegiatan bersama"
+                                loading="lazy">
+                            <span class="label-kategori">Organisasi</span>
+                        </div>
+
+                        <div class="isi-kartu-kegiatan">
+                            <span class="nomor-kegiatan">KEGIATAN 04</span>
+                            <h3>Kegiatan Organisasi Siswa</h3>
+                            <p>
+                                Melatih jiwa kepemimpinan, tanggung jawab,
+                                komunikasi, dan kerja sama antarsiswa.
+                            </p>
+                        </div>
+                    </article>
+
+                   
+
+                   
+
+                    <!-- KEGIATAN 7 -->
+                    <article class="kartu-kegiatan"
+                             data-kategori="sosial">
+                        <div class="gambar-kegiatan">
+                            <img
+                                src="20261011_073840.jpg"
+                                alt="Lingkungan alam dan pepohonan"
+                                loading="lazy">
+                            <span class="label-kategori">Sosial</span>
+                        </div>
+
+                        <div class="isi-kartu-kegiatan">
+                            <span class="nomor-kegiatan">KEGIATAN 07</span>
+                            <h3>Peduli Lingkungan</h3>
+                            <p>
+                                Membiasakan siswa menjaga kebersihan,
+                                merawat lingkungan, dan membuang sampah
+                                pada tempatnya.
+                            </p>
+                        </div>
+                    </article>
+ </div>
+            </div>
+        </section>
+    </main>
+
+                    
+
+                   
+        <!-- BAGIAN PENUTUP -->
+       <section class="ajakan-kegiatan">
+            <div class="wadah isi-ajakan-kegiatan">
+                <div>
+                    <span class="label-bagian label-terang">
+                        TUMBUH DAN BERKEMBANG
+                    </span>
+
+                    <h2>Setiap Kegiatan adalah Pengalaman Berharga</h2>
+
+                    <p>
+                        Kenali fasilitas dan lingkungan belajar
+                        SMPIT Nur Hidayah lebih dekat.
+                    </p>
+                </div>
+
+                <a href="fasilitas.html" class="tombol-ajakan-kegiatan">
+                    Lihat Fasilitas →
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="kaki-sekolah">
+        <div class="wadah kisi-footer">
+
+            <div class="isi-footer">
+                <div class="logo-sekolah logo-footer">NH</div>
+                <h3>SMPIT Nur Hidayah</h3>
+                <p>
+                    Membangun generasi berilmu, berakhlak mulia,
+                    dan siap menghadapi masa depan.
+                </p>
+            </div>
+
+            <div class="isi-footer">
+                <h3>Navigasi</h3>
+                <a href="index.html">Beranda</a>
+                <a href="profil.html">Profil Sekolah</a>
+                <a href="fasilitas.html">Fasilitas</a>
+                <a href="kegiatan.html">Kegiatan</a>
+                <a href="prestasi.html">Prestasi</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+
+            <div class="isi-footer">
+                <h3>Kontak Sekolah</h3>
+                <p>Telepon: 812-2845-1684</p>
+                <p>Email: info@smpitnurhidayah.sch.id</p>
+                <p>
+                    Jl. Kahuripan Utara Raya, Kelurahan Sumber, Kecamatan Banjarsari, Kota Surakarta, Jawa Tengah 57138
+                </p>
+            </div>
+
+        </div>
+
+        <div class="bagian-hakcipta">
+            <div class="wadah hakcipta-dalam">
+                <p>
+                    © <span id="tahunSekarang"></span>
+                    SMPIT Nur Hidayah. Seluruh hak cipta dilindungi.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="tombol-atas" id="tombolAtas"
+            aria-label="Kembali ke atas">↑</button>
+
+    <script src="fungsi.js"></script>
+
+    <!-- SCRIPT FILTER KEGIATAN -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tombolFilter = document.querySelectorAll(".tombol-filter");
+            const kartuKegiatan = document.querySelectorAll(".kartu-kegiatan");
+
+            tombolFilter.forEach(function (tombol) {
+                tombol.addEventListener("click", function () {
+                    const filterDipilih = tombol.dataset.filter;
+
+                    tombolFilter.forEach(function (item) {
+                        item.classList.remove("aktif");
+                        item.setAttribute("aria-pressed", "false");
+                    });
+
+                    tombol.classList.add("aktif");
+                    tombol.setAttribute("aria-pressed", "true");
+
+                    kartuKegiatan.forEach(function (kartu) {
+                        const kategori = kartu.dataset.kategori;
+                        const cocok = filterDipilih === "semua" ||
+                                      kategori === filterDipilih;
+
+                        kartu.hidden = !cocok;
+                    });
+                });
+            });
+
+            const tahun = document.getElementById("tahunSekarang");
+            if (tahun) {
+                tahun.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>

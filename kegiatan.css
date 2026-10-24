@@ -1,0 +1,1131 @@
+```css
+/* ========================================
+   PENGATURAN DASAR
+======================================== */
+:root {
+    --biru-utama: #2F39A9;
+    --biru-muda: #49A4BB;
+    --hijau-toska: #15D8B3;
+    --putih: #ffffff;
+    --abu-terang: #f5f7fb;
+    --abu-teks: #626b7a;
+    --bayangan: 0 10px 30px rgba(29, 43, 91, 0.10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #202844;
+    background: var(--putih);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wadah {
+    width: min(1140px, 90%);
+    margin: 0 auto;
+}
+
+/* ========================================
+   HEADER DAN NAVIGASI
+======================================== */
+.kepala-atas {
+    color: var(--putih);
+    background: var(--biru-utama);
+}
+
+.kepala-atas-dalam {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.label-berita {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    color: #17317a;
+    background: var(--hijau-toska);
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.teks-berjalan {
+    flex: 1;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.sosial {
+    display: flex;
+    gap: 7px;
+}
+
+.sosial a {
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    color: var(--putih);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sosial a:hover {
+    color: var(--biru-utama);
+    background: var(--hijau-toska);
+}
+
+.kepala-utama {
+    position: relative;
+    z-index: 10;
+    background: var(--putih);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.06);
+}
+
+.kepala-utama-dalam {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.identitas-sekolah {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--biru-utama);
+}
+
+.logo-sekolah {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--putih);
+    background: linear-gradient(
+        135deg,
+        var(--biru-utama),
+        var(--biru-muda)
+    );
+    border-radius: 16px;
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.identitas-sekolah h1 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.identitas-sekolah p {
+    margin: 3px 0 0;
+    color: var(--abu-teks);
+    font-size: 12px;
+}
+
+.navigasi {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.navigasi > a,
+.tombol-turun {
+    padding: 10px 0;
+    color: #303950;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navigasi > a:hover,
+.navigasi > a.aktif,
+.tombol-turun:hover {
+    color: var(--biru-muda);
+}
+
+.menu-turun {
+    position: relative;
+}
+
+.isi-turun {
+    position: absolute;
+    top: 100%;
+    left: -12px;
+    min-width: 210px;
+    display: none;
+    padding: 9px;
+    background: var(--putih);
+    border-radius: 10px;
+    box-shadow: var(--bayangan);
+}
+
+.menu-turun:hover .isi-turun,
+.menu-turun:focus-within .isi-turun {
+    display: block;
+}
+
+.isi-turun a {
+    display: block;
+    padding: 10px 12px;
+    color: #303950;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.isi-turun a:hover {
+    color: var(--biru-utama);
+    background: var(--abu-terang);
+}
+
+.tombol-menu {
+    display: none;
+    padding: 7px 12px;
+    color: var(--biru-utama);
+    background: var(--abu-terang);
+    border: none;
+    border-radius: 8px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* ========================================
+   HERO KEGIATAN
+======================================== */
+.hero-kegiatan {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--putih);
+    background:
+        linear-gradient(
+            110deg,
+            rgba(25, 35, 126, 0.94),
+            rgba(47, 57, 169, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=85")
+        center 45% / cover no-repeat;
+}
+
+.lapisan-kegiatan {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(22, 30, 112, 0.3),
+        transparent
+    );
+}
+
+.isi-hero-kegiatan {
+    position: relative;
+    z-index: 1;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.label-hero,
+.label-bagian {
+    display: inline-block;
+    color: var(--biru-muda);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.label-hero {
+    color: var(--hijau-toska);
+}
+
+.isi-hero-kegiatan h2 {
+    max-width: 700px;
+    margin: 10px 0;
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.15;
+}
+
+.isi-hero-kegiatan > p:not(.label-hero) {
+    max-width: 620px;
+    margin: 15px 0 20px;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.jalur-kegiatan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.jalur-kegiatan a {
+    color: var(--hijau-toska);
+}
+
+.jalur-kegiatan span:last-child {
+    color: var(--putih);
+}
+
+/* ========================================
+   PENGANTAR KEGIATAN
+======================================== */
+.pengantar-kegiatan {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.teks-pengantar-kegiatan h2 {
+    margin: 10px 0 14px;
+    color: var(--biru-utama);
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.3;
+}
+
+.teks-pengantar-kegiatan p {
+    margin: 0;
+    color: var(--abu-teks);
+    font-size: 15px;
+}
+
+.hiasan-kegiatan {
+    display: grid;
+    gap: 15px;
+}
+
+.item-hiasan {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f0f7fc;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.item-hiasan:hover {
+    transform: translateX(5px);
+}
+
+.ikon-hiasan {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--biru-utama);
+    background: var(--putih);
+    border-radius: 13px;
+    font-size: 24px;
+}
+
+.item-hiasan h3 {
+    margin: 0 0 3px;
+    color: var(--biru-utama);
+    font-size: 15px;
+}
+
+.item-hiasan p {
+    margin: 0;
+    color: var(--abu-teks);
+    font-size: 12px;
+}
+
+/* ========================================
+   GALERI DAN FILTER
+======================================== */
+.bagian-galeri-kegiatan {
+    padding: 75px 0 80px;
+    background: var(--abu-terang);
+}
+
+.judul-kegiatan {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.judul-kegiatan h2 {
+    margin: 10px 0 14px;
+    color: var(--biru-utama);
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.3;
+}
+
+.judul-kegiatan p {
+    margin: 0;
+    color: var(--abu-teks);
+    font-size: 15px;
+}
+
+.filter-kegiatan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 35px;
+}
+
+.tombol-filter {
+    padding: 10px 19px;
+    color: var(--biru-utama);
+    background: var(--putih);
+    border: 1px solid #dfe4f0;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.25s,
+        color 0.25s,
+        transform 0.25s;
+}
+
+.tombol-filter:hover {
+    transform: translateY(-2px);
+    border-color: var(--biru-muda);
+}
+
+.tombol-filter.aktif {
+    color: var(--putih);
+    background: var(--biru-utama);
+    border-color: var(--biru-utama);
+    box-shadow: 0 5px 15px rgba(47, 57, 169, 0.18);
+}
+
+.tombol-filter:focus-visible {
+    outline: 3px solid var(--hijau-toska);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   KARTU KEGIATAN
+======================================== */
+.kisi-kegiatan {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+}
+
+.kartu-kegiatan {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--putih);
+    border-radius: 15px;
+    box-shadow: var(--bayangan);
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    animation: muncul-kegiatan 0.35s ease both;
+}
+
+.kartu-kegiatan:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 17px 35px rgba(29, 43, 91, 0.15);
+}
+
+.kartu-kegiatan[hidden] {
+    display: none !important;
+}
+
+.gambar-kegiatan {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #e7edf5;
+}
+
+.gambar-kegiatan img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.kartu-kegiatan:hover .gambar-kegiatan img {
+    transform: scale(1.06);
+}
+
+.label-kategori {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 6px 11px;
+    color: var(--biru-utama);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.isi-kartu-kegiatan {
+    padding: 22px;
+}
+
+.nomor-kegiatan {
+    color: var(--biru-muda);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.isi-kartu-kegiatan h3 {
+    margin: 7px 0 9px;
+    color: var(--biru-utama);
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.isi-kartu-kegiatan p {
+    margin: 0;
+    color: var(--abu-teks);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.catatan-kegiatan {
+    margin: 25px 0 0;
+    padding: 13px 16px;
+    color: #5c6474;
+    background: #e9edf8;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* ========================================
+   AJAKAN
+======================================== */
+.ajakan-kegiatan {
+    padding: 60px 0;
+    color: var(--putih);
+    background: linear-gradient(
+        120deg,
+        var(--biru-utama),
+        #354fb9,
+        var(--biru-muda)
+    );
+}
+
+.isi-ajakan-kegiatan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.label-terang {
+    color: var(--hijau-toska);
+}
+
+.isi-ajakan-kegiatan h2 {
+    max-width: 620px;
+    margin: 10px 0;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.3;
+}
+
+.isi-ajakan-kegiatan p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+}
+
+.tombol-ajakan-kegiatan {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 13px 22px;
+    color: var(--biru-utama);
+    background: var(--hijau-toska);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    transition:
+        transform 0.3s,
+        background 0.3s;
+}
+
+.tombol-ajakan-kegiatan:hover {
+    transform: translateY(-3px);
+    background: var(--putih);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.kaki-sekolah {
+    color: #e5e9f5;
+    background: #17204d;
+}
+
+.kisi-footer {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr;
+    gap: 45px;
+    padding-top: 55px;
+    padding-bottom: 45px;
+}
+
+.logo-footer {
+    margin-bottom: 15px;
+}
+
+.isi-footer h3 {
+    margin: 0 0 15px;
+    color: var(--putih);
+    font-size: 17px;
+}
+
+.isi-footer p,
+.isi-footer a {
+    color: #c4cbe0;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.isi-footer p {
+    overflow-wrap: anywhere;
+}
+
+.isi-footer a {
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.isi-footer a:hover {
+    color: var(--hijau-toska);
+}
+
+.bagian-hakcipta {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hakcipta-dalam {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    text-align: center;
+}
+
+.hakcipta-dalam p {
+    margin: 0;
+    color: #c4cbe0;
+    font-size: 12px;
+}
+
+/* ========================================
+   TOMBOL KEMBALI KE ATAS
+======================================== */
+.tombol-atas {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 50;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    color: var(--putih);
+    background: var(--biru-utama);
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--bayangan);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ========================================
+   ANIMASI
+======================================== */
+@keyframes muncul-kegiatan {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIF TABLET
+======================================== */
+@media (max-width: 1000px) {
+    .navigasi {
+        gap: 12px;
+    }
+
+    .navigasi > a,
+    .tombol-turun {
+        font-size: 12px;
+    }
+
+    .kisi-kegiatan {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kisi-footer {
+        gap: 25px;
+    }
+}
+
+/* ========================================
+   RESPONSIF HP
+======================================== */
+@media (max-width: 760px) {
+    .kepala-atas-dalam {
+        min-height: 42px;
+    }
+
+    .teks-berjalan {
+        font-size: 11px;
+    }
+
+    .sosial {
+        display: none;
+    }
+
+    .kepala-utama-dalam {
+        min-height: 76px;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo-sekolah {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .identitas-sekolah h1 {
+        font-size: 15px;
+    }
+
+    .tombol-menu {
+        display: block;
+    }
+
+    .navigasi {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 10px 0;
+    }
+
+    .navigasi.buka {
+        display: flex;
+    }
+
+    .navigasi > a,
+    .tombol-turun {
+        width: 100%;
+        display: block;
+        padding: 11px 10px;
+        text-align: left;
+    }
+
+    .menu-turun {
+        width: 100%;
+    }
+
+    .isi-turun {
+        position: static;
+        display: none;
+        padding: 0 0 5px 12px;
+        box-shadow: none;
+    }
+
+    .menu-turun:hover .isi-turun {
+        display: none;
+    }
+
+    .menu-turun:focus-within .isi-turun {
+        display: block;
+    }
+
+    .hero-kegiatan {
+        min-height: 300px;
+    }
+
+    .isi-hero-kegiatan {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .pengantar-kegiatan {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .bagian-galeri-kegiatan {
+        padding: 55px 0;
+    }
+
+    .filter-kegiatan {
+        gap: 8px;
+    }
+
+    .tombol-filter {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .gambar-kegiatan {
+        height: 190px;
+    }
+
+    .isi-kartu-kegiatan {
+        padding: 17px;
+    }
+
+    .isi-ajakan-kegiatan {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .kisi-footer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+}
+
+/* ========================================
+   RESPONSIF HP KECIL
+======================================== */
+@media (max-width: 480px) {
+    .wadah {
+        width: 92%;
+    }
+
+    .label-berita {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+    .teks-berjalan {
+        font-size: 10px;
+    }
+
+    .identitas-sekolah {
+        gap: 8px;
+    }
+
+    .identitas-sekolah h1 {
+        font-size: 13px;
+    }
+
+    .identitas-sekolah p {
+        font-size: 10px;
+    }
+
+    .kisi-kegiatan {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gambar-kegiatan {
+        height: 225px;
+    }
+
+    .judul-kegiatan {
+        text-align: left;
+    }
+
+    .filter-kegiatan {
+        justify-content: flex-start;
+    }
+
+    .isi-hero-kegiatan h2 {
+        font-size: 35px;
+    }
+
+    .tombol-ajakan-kegiatan {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mengurangi animasi sesuai preferensi perangkat */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+```
+
+/* =====================================
+   TEMA WARNA WEBSITE SMPIT NUR HIDAYAH
+   ===================================== */
+
+:root {
+    --biru-utama: #2F39A9;
+    --biru-muda: #49A4BB;
+    --toska: #15D8B3;
+    --toska-lembut: #E5FBF6;
+    --biru-lembut: #EEF0FF;
+    --putih: #FFFFFF;
+    --teks: #26304A;
+    --latar: #F7FAFF;
+    --bayangan: 0 10px 30px rgba(47, 57, 169, 0.12);
+}
+
+/* Latar semua halaman */
+body {
+    background: var(--latar);
+    color: var(--teks);
+}
+
+/* Header bagian atas */
+.kepala-atas {
+    background: linear-gradient(90deg, #2F39A9, #49A4BB, #15D8B3);
+    color: white;
+}
+
+/* Header utama */
+.kepala-utama {
+    background: linear-gradient(120deg, #FFFFFF, #EFFFFB);
+    border-bottom: 3px solid var(--toska);
+    box-shadow: 0 5px 20px rgba(47, 57, 169, 0.10);
+}
+
+/* Navigasi */
+.navigasi a,
+.tombol-turun {
+    transition: all 0.3s ease;
+}
+
+.navigasi a:hover,
+.tombol-turun:hover {
+    color: var(--biru-utama);
+    background: var(--toska-lembut);
+    border-radius: 10px;
+}
+
+/* Judul bagian */
+h2 {
+    color: var(--biru-utama);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--toska), var(--biru-muda));
+}
+
+/* Bagian hero dan banner */
+.hero,
+.hero-profil,
+.hero-fasilitas,
+.hero-kegiatan,
+.hero-prestasi,
+.hero-kontak,
+.hero-developer {
+    background: linear-gradient(
+        135deg,
+        rgba(47, 57, 169, 0.96),
+        rgba(73, 164, 187, 0.91),
+        rgba(21, 216, 179, 0.88)
+    );
+    color: white;
+}
+
+/* Kartu konten */
+.kartu,
+.kartu-sejarah,
+.kartu-visi,
+.kartu-misi,
+.kartu-fasilitas,
+.kartu-kegiatan,
+.kartu-prestasi,
+.kartu-berita {
+    background: white;
+    border: 1px solid #E4EAF8;
+    border-radius: 18px;
+    box-shadow: var(--bayangan);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu:hover,
+.kartu-sejarah:hover,
+.kartu-visi:hover,
+.kartu-misi:hover,
+.kartu-fasilitas:hover,
+.kartu-kegiatan:hover,
+.kartu-prestasi:hover,
+.kartu-berita:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(47, 57, 169, 0.18);
+}
+
+/* Tombol */
+button,
+.tombol,
+.tombol-utama,
+.tombol-cta {
+    transition: all 0.3s ease;
+}
+
+.tombol-utama,
+.tombol-cta {
+    background: linear-gradient(90deg, var(--biru-utama), var(--biru-muda));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+}
+
+.tombol-utama:hover,
+.tombol-cta:hover {
+    background: linear-gradient(90deg, #222B8C, #087F72);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(47, 57, 169, 0.2);
+}
+
+/* Gambar */
+img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+img:hover {
+    filter: saturate(1.12);
+}
+
+/* Bagian selang-seling */
+.bagian:nth-of-type(even),
+.bagian-profil:nth-of-type(even) {
+    background-color: #F0FBFA;
+}
+
+/* Statistik dan ajakan */
+.bagian-statistik,
+.statistik {
+    background: linear-gradient(135deg, #2F39A9, #49A4BB);
+    color: white;
+}
+
+.ajakan,
+.ajakan-profil {
+    background: linear-gradient(120deg, #E5FBF6, #EEF0FF);
+    border-radius: 22px;
+}
+
+/* Filter galeri */
+.filter button,
+.tombol-filter {
+    background: #EEF0FF;
+    color: var(--biru-utama);
+    border: 1px solid #D9DDF8;
+    border-radius: 25px;
+    padding: 9px 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.filter button:hover,
+.tombol-filter:hover,
+.filter button.aktif,
+.tombol-filter.aktif {
+    background: var(--biru-utama);
+    color: white;
+}
+
+/* Footer */
+footer,
+.kaki-halaman {
+    background: linear-gradient(135deg, #202878, #2F39A9, #246B83);
+    color: white;
+}
+
+footer a,
+.kaki-halaman a {
+    color: #BFF9EC;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+.kaki-halaman a:hover {
+    color: white;
+}
+
+/* Animasi saat halaman dimuat */
+@keyframes munculHalus {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: munculHalus 0.7s ease both;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .ajakan,
+    .ajakan-profil {
+        border-radius: 14px;
+    }
+
+    .tombol-utama,
+    .tombol-cta {
+        padding: 10px 17px;
+    }
+}

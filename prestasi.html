@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeri prestasi akademik, keagamaan, olahraga, dan kreativitas siswa SMPIT Nur Hidayah.">
+    <title>Prestasi | SMPIT Nur Hidayah</title>
+
+    <link rel="stylesheet" href="gaya.css">
+    <link rel="stylesheet" href="prestasi.css">
+</head>
+<body>
+
+    <!-- HEADER BERITA -->
+    <div class="kepala-atas">
+        <div class="wadah kepala-atas-dalam">
+            <span class="label-berita">INFO SEKOLAH</span>
+
+            <div class="teks-berjalan">
+                Selamat datang di website SMPIT Nur Hidayah.
+                Bersama membangun generasi Islami, berprestasi, dan mandiri.
+            </div>
+
+            <div class="sosial">
+                <a href="https://www.instagram.com/" aria-label="Instagram">IG</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">FB</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">YT</a>
+                <a href="https://www.tiktok.com/" aria-label="TikTok">TT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER UTAMA -->
+    <header class="kepala-utama">
+        <div class="wadah kepala-utama-dalam">
+
+            <a href="index.html" class="identitas-sekolah">
+                <img src="logo smpit.png"
+     alt="Logo SMPIT Nur Hidayah"
+     class="logo-sekolah">
+                <div>
+                    <h1>SMPIT NUR HIDAYAH</h1>
+                    <p>Sekolah Islam Terpadu</p>
+                </div>
+            </a>
+
+            <button class="tombol-menu" id="tombolMenu"
+                    aria-label="Buka menu navigasi"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navigasi" id="navigasiUtama">
+                <a href="index.html">Beranda</a>
+
+                <div class="menu-turun">
+                    <button class="tombol-turun" type="button">
+                        Tentang Kami ▾
+                    </button>
+                    <div class="isi-turun">
+                        <a href="profil.html">Profil Sekolah</a>
+                        <a href="sambutan.html">Sambutan Kepala Sekolah</a>
+                    </div>
+                </div>
+
+                <a href="fasilitas.html">Fasilitas</a>
+                <a href="kegiatan.html">Kegiatan</a>
+                <a href="prestasi.html" class="aktif">Prestasi</a>
+                <a href="kontak.html">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO PRESTASI -->
+        <section class="hero-prestasi">
+            <div class="lapisan-prestasi"></div>
+
+            <div class="wadah isi-hero-prestasi">
+                <span class="label-hero">KARYA DAN PENCAPAIAN</span>
+
+                <h2>Prestasi Sekolah</h2>
+
+                <p>
+                    Setiap pencapaian adalah hasil dari usaha,
+                    doa, kedisiplinan, dan semangat untuk terus
+                    menjadi lebih baik.
+                </p>
+
+                <div class="jalur-prestasi">
+                    <a href="index.html">Beranda</a>
+                    <span>/</span>
+                    <span>Prestasi</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PENGANTAR -->
+        <section class="pengantar-prestasi wadah">
+            <div class="teks-pengantar-prestasi">
+                <span class="label-bagian">BANGGA ATAS PENCAPAIAN</span>
+
+                <h2>Langkah Kecil, Prestasi Besar</h2>
+
+                <p>
+                    Prestasi merupakan hasil dari semangat belajar,
+                    latihan, kerja sama, dan ketekunan. Sekolah
+                    mendukung siswa untuk mengembangkan potensi
+                    dalam bidang akademik, keagamaan, olahraga,
+                  dan berbagai bidang lainnya.
+                </p>
+
+                <p>
+                    Setiap pencapaian menjadi motivasi untuk terus
+                    belajar, berani mencoba, dan memberikan yang terbaik.
+                </p>
+            </div>
+
+            <div class="pesan-prestasi">
+                <span class="ikon-piala">🏆</span>
+                <h3>Terus Berusaha</h3>
+                <p>
+                    Prestasi bukan hanya tentang menjadi juara,
+                    tetapi juga tentang proses belajar dan keberanian
+                    untuk berkembang.
+                </p>
+            </div>
+        </section>
+
+        <!-- GALERI PRESTASI -->
+        <section class="bagian-galeri-prestasi">
+            <div class="wadah">
+
+                <div class="judul-prestasi">
+                    <span class="label-bagian">GALERI PRESTASI</span>
+                    <h2>Pencapaian Siswa</h2>
+                    <p>
+                        Pilih kategori untuk melihat contoh pencapaian
+                        berdasarkan bidangnya.
+                    </p>
+                </div>
+
+                <!-- FILTER KATEGORI -->
+                <div class="filter-prestasi" role="group"
+                     aria-label="Filter kategori prestasi">
+
+                    <button type="button"
+                            class="tombol-filter aktif"
+                            data-filter="semua"
+                            aria-pressed="true">
+                        Semua
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="akademik"
+                            aria-pressed="false">
+                        Akademik
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="keagamaan"
+                            aria-pressed="false">
+                        Keagamaan
+                    </button>
+
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="olahraga"
+                            aria-pressed="false">
+                        Olahraga
+                    </button>
+
+                   
+                    <button type="button"
+                            class="tombol-filter"
+                            data-filter="organisasi"
+                            aria-pressed="false">
+                        Organisasi
+                    </button>
+                </div>
+
+                <!-- DAFTAR PRESTASI -->
+                <div class="kisi-prestasi" id="kisiPrestasi">
+
+                    <!-- PRESTASI 1 -->
+                    <article class="kartu-prestasi"
+                             data-kategori="akademik">
+                        <div class="gambar-prestasi">
+                            <img
+                                src="pres aka.jpeg"
+                                alt="Buku dan alat tulis untuk belajar"
+                                loading="lazy">
+                            <span class="label-kategori">Akademik</span>
+                        </div>
+
+                        <div class="isi-kartu-prestasi">
+                            <span class="nomor-prestasi">BIDANG 01</span>
+                            <h3>Prestasi Akademik</h3>
+                            <p>
+                                Apresiasi bagi siswa yang menunjukkan
+                                semangat belajar, kemampuan berpikir,
+                                dan hasil yang baik dalam bidang akademik.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- PRESTASI 2 -->
+                    <article class="kartu-prestasi"
+                             data-kategori="keagamaan">
+                        <div class="gambar-prestasi">
+                            <img
+                                src="Cuplikan layar 2026-10-22 114248.png"
+                                alt="Al-Qur'an untuk kegiatan keagamaan"
+                                loading="lazy">
+                            <span class="label-kategori">Keagamaan</span>
+                        </div>
+
+                        <div class="isi-kartu-prestasi">
+                            <span class="nomor-prestasi">BIDANG 02</span>
+                            <h3>Hafalan Al-Qur'an</h3>
+                            <p>
+                                Penghargaan atas ketekunan dalam
+                                menghafal dan menjaga hafalan Al-Qur'an
+                                sesuai target pembelajaran.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- PRESTASI 3 -->
+                    <article class="kartu-prestasi"
+                             data-kategori="olahraga">
+                        <div class="gambar-prestasi">
+                            <img
+                                src="pres silat.jpeg"
+                                alt="Atlet sedang berlari dalam olahraga"
+                                loading="lazy">
+                            <span class="label-kategori">Olahraga</span>
+                        </div>
+
+                        <div class="isi-kartu-prestasi">
+                            <span class="nomor-prestasi">BIDANG 03</span>
+                            <h3>Kejuaraan Olahraga</h3>
+                            <p>
+                                Pencapaian melalui latihan, kedisiplinan,
+                                sportivitas, dan semangat berkompetisi
+                                dalam bidang olahraga.
+                            </p>
+                        </div>
+                    </article>
+
+                   
+
+                   
+
+                    <!-- PRESTASI 6 -->
+                    <article class="kartu-prestasi"
+                             data-kategori="organisasi">
+                        <div class="gambar-prestasi">
+                            <img
+                                src="IMG_5839.JPG"
+                                alt="Kelompok orang bekerja sama dalam kegiatan"
+                                loading="lazy">
+                            <span class="label-kategori">Organisasi</span>
+                        </div>
+
+                        <div class="isi-kartu-prestasi">
+                            <span class="nomor-prestasi">BIDANG 06</span>
+                            <h3>Kepemimpinan dan Organisasi</h3>
+                            <p>
+                                Apresiasi terhadap tanggung jawab,
+                                kerja sama, komunikasi, dan kemampuan
+                                memimpin dalam kegiatan bersama.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- PRESTASI 7 -->
+                    <article class="kartu-prestasi"
+                             data-kategori="keagamaan">
+                        <div class="gambar-prestasi">
+                            <img
+                                src="Cuplikan layar 2026-10-22 114329.png"
+                                alt="Bangunan masjid sebagai ilustrasi kegiatan keagamaan"
+                                loading="lazy">
+                            <span class="label-kategori">Keagamaan</span>
+                        </div>
+
+                        <div class="isi-kartu-prestasi">
+                            <span class="nomor-prestasi">BIDANG 07</span>
+                            <h3>Kompetisi Keagamaan</h3>
+                            <p>
+                                Pengembangan kemampuan dan pengetahuan
+                                keislaman melalui kegiatan atau perlombaan
+                                keagamaan.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- PRESTASI 8 -->
+                    <article class="kartu-prestasi"
+                             data-kategori="olahraga">
+                        <div class="gambar-prestasi">
+                            <img
+                                src="pres basket.jpg"
+                                alt="Kegiatan olahraga bersama"
+                                loading="lazy">
+                            <span class="label-kategori">Olahraga</span>
+                        </div>
+
+                        <div class="isi-kartu-prestasi">
+                            <span class="nomor-prestasi">BIDANG 08</span>
+                            <h3>Kompetisi Olahraga Tim</h3>
+                            <p>
+                                Melatih kerja sama, strategi, ketahanan,
+                                dan sportivitas untuk mencapai tujuan
+                                bersama.
+                            </p>
+                        </div>
+                    </article>
+
+                   
+                </div>
+
+                
+
+            </div>
+        </section>
+
+        <!-- PENUTUP -->
+        <section class="ajakan-prestasi">
+            <div class="wadah isi-ajakan-prestasi">
+                <div>
+                    <span class="label-bagian label-terang">
+                        TERUS BERTUMBUH
+                    </span>
+
+                    <h2>Setiap Siswa Punya Potensi untuk Berprestasi</h2>
+
+                    <p>
+                        Kenali kegiatan sekolah yang mendukung bakat
+                        dan kemampuan siswa.
+                    </p>
+                </div>
+
+                <a href="kegiatan.html" class="tombol-ajakan-prestasi">
+                    Lihat Kegiatan →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="kaki-sekolah">
+        <div class="wadah kisi-footer">
+
+            <div class="isi-footer">
+                <div class="logo-sekolah logo-footer">NH</div>
+                <h3>SMPIT Nur Hidayah</h3>
+                <p>
+                    Membangun generasi berilmu, berakhlak mulia,
+                    dan siap menghadapi masa depan.
+                </p>
+            </div>
+
+            <div class="isi-footer">
+                <h3>Navigasi</h3>
+                <a href="index.html">Beranda</a>
+                <a href="profil.html">Profil Sekolah</a>
+                <a href="fasilitas.html">Fasilitas</a>
+                <a href="kegiatan.html">Kegiatan</a>
+                <a href="prestasi.html">Prestasi</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+
+            <div class="isi-footer">
+                <h3>Kontak Sekolah</h3>
+                <p>Telepon: 812-2845-1684</p>
+                <p>Email: info@smpitnurhidayah.sch.id</p>
+                <p>
+                    Jl. Kahuripan Utara Raya, Kelurahan Sumber, Kecamatan Banjarsari, Kota Surakarta, Jawa Tengah 57138
+                </p>
+            </div>
+
+        </div>
+
+        <div class="bagian-hakcipta">
+            <div class="wadah hakcipta-dalam">
+                <p>
+                    © <span id="tahunSekarang"></span>
+                    SMPIT Nur Hidayah. Seluruh hak cipta dilindungi.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="tombol-atas" id="tombolAtas"
+            aria-label="Kembali ke atas">↑</button>
+
+    <script src="fungsi.js"></script>
+
+    <!-- FILTER PRESTASI -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tombolFilter = document.querySelectorAll(".tombol-filter");
+            const kartuPrestasi = document.querySelectorAll(".kartu-prestasi");
+
+            tombolFilter.forEach(function (tombol) {
+                tombol.addEventListener("click", function () {
+                    const filterDipilih = tombol.dataset.filter;
+
+                    tombolFilter.forEach(function (item) {
+                        item.classList.remove("aktif");
+                        item.setAttribute("aria-pressed", "false");
+                    });
+
+                    tombol.classList.add("aktif");
+                    tombol.setAttribute("aria-pressed", "true");
+
+                    kartuPrestasi.forEach(function (kartu) {
+                        const kategori = kartu.dataset.kategori;
+                        const cocok = filterDipilih === "semua" ||
+                                      kategori === filterDipilih;
+
+                        kartu.hidden = !cocok;
+                    });
+                });
+            });
+
+            const tahun = document.getElementById("tahunSekarang");
+            if (tahun) {
+                tahun.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>

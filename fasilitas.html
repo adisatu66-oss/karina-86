@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informasi fasilitas SMPIT Nur Hidayah untuk mendukung kegiatan belajar dan pengembangan siswa.">
+    <title>Fasilitas | SMPIT Nur Hidayah</title>
+
+    <link rel="stylesheet" href="gaya.css">
+    <link rel="stylesheet" href="fasilitas.css">
+</head>
+<body>
+
+    <!-- Header Berita -->
+    <div class="kepala-atas">
+        <div class="wadah kepala-atas-dalam">
+            <span class="label-berita">INFO SEKOLAH</span>
+            <div class="teks-berjalan">
+                Selamat datang di website resmi SMPIT Nur Hidayah.
+                Berkarakter Islami, berprestasi, dan peduli lingkungan.
+            </div>
+
+            <div class="sosial">
+                <a href="https://www.instagram.com/" aria-label="Instagram">IG</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">FB</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">YT</a>
+                <a href="https://www.tiktok.com/" aria-label="TikTok">TT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Utama -->
+    <header class="kepala-utama">
+        <div class="wadah kepala-utama-dalam">
+                 <a href="index.html" class="identitas-sekolah">
+                <img src="logo smpit.png"
+     alt="Logo SMPIT Nur Hidayah"
+     class="logo-sekolah">
+                <div>
+                    <h1>SMPIT NUR HIDAYAH</h1>
+                    <p>Sekolah Islam Terpadu</p>
+                </div>
+            </a>
+
+            <button class="tombol-menu" id="tombolMenu"
+                    aria-label="Buka menu navigasi"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navigasi" id="navigasiUtama">
+                <a href="index.html">Beranda</a>
+
+                <div class="menu-turun">
+                    <button class="tombol-turun" type="button">
+                        Tentang Kami ▾
+                    </button>
+                    <div class="isi-turun">
+                        <a href="profil.html">Profil Sekolah</a>
+                        <a href="sambutan.html">Sambutan Kepala Sekolah</a>
+                    </div>
+                </div>
+
+                <a href="fasilitas.html" class="aktif">Fasilitas</a>
+                <a href="kegiatan.html">Kegiatan</a>
+                <a href="prestasi.html">Prestasi</a>
+                <a href="kontak.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-fasilitas">
+            <div class="lapisan-fasilitas"></div>
+            <div class="wadah isi-hero-fasilitas">
+                <p class="label-hero">SARANA DAN PRASARANA</p>
+                <h2>Fasilitas Sekolah</h2>
+                <p>
+                    Lingkungan belajar yang nyaman untuk mendukung
+                    siswa tumbuh, belajar, dan meraih prestasi.
+                </p>
+                <div class="jalur-fasilitas">
+                    <a href="index.html">Beranda</a>
+                    <span>/</span>
+                    <span>Fasilitas</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengantar -->
+        <section class="pengantar-fasilitas wadah">
+            <div class="teks-pengantar">
+                <span class="label-bagian">FASILITAS KAMI</span>
+                <h2>Mendukung Belajar dengan Nyaman</h2>
+                <p>
+                    Fasilitas sekolah merupakan bagian penting dalam
+                    menciptakan kegiatan belajar yang aman, nyaman,
+                    dan menyenangkan. Berbagai sarana dapat mendukung
+                    pembelajaran, ibadah, serta pengembangan
+                    bakat dan minat siswa.
+                </p>
+            </div>
+
+            <div class="hiasan-pengantar">
+                <span>Belajar</span>
+                <span>Beribadah</span>
+                <span>Berkarya</span>
+            </div>
+        </section>
+
+        <!-- Galeri Fasilitas -->
+        <section class="bagian-galeri-fasilitas">
+            <div class="wadah">
+                <div class="judul-fasilitas">
+                    <span class="label-bagian">JELAJAHI SEKOLAH</span>
+                    <h2>Fasilitas yang Tersedia</h2>
+                    <p>
+                        Pilih kategori untuk melihat fasilitas sesuai
+                        kebutuhanmu.
+                    </p>
+                </div>
+
+                <!-- Tombol Filter -->
+                <div class="filter-fasilitas" role="group"
+                     aria-label="Filter kategori fasilitas">
+                    <button class="tombol-filter aktif"
+                            type="button" data-filter="semua"
+                            aria-pressed="true">Semua</button>
+                    <button class="tombol-filter"
+                            type="button" data-filter="belajar"
+                            aria-pressed="false">Pembelajaran</button>
+                    <button class="tombol-filter"
+                            type="button" data-filter="ibadah"
+                            aria-pressed="false">Ibadah</button>
+                    <button class="tombol-filter"
+                            type="button" data-filter="umum"
+                            aria-pressed="false">Fasilitas Umum</button>
+                </div>
+
+                <!-- Kartu Fasilitas -->
+                <div class="kisi-fasilitas" id="kisiFasilitas">
+
+                    <article class="kartu-fasilitas"
+                             data-kategori="belajar">
+                        <div class="gambar-fasilitas">
+                            <img
+                                src="kelas.jpeg"
+                                alt="Ruang kelas untuk kegiatan belajar"
+                                loading="lazy">
+                            <span class="label-kategori">Pembelajaran</span>
+                        </div>
+                        <div class="isi-kartu-fasilitas">
+                            <h3>Ruang Kelas</h3>
+                            <p>
+                                Tempat siswa mengikuti pembelajaran,
+                                berdiskusi, dan mengembangkan pengetahuan
+                                bersama guru.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="kartu-fasilitas"
+                             data-kategori="belajar">
+                        <div class="gambar-fasilitas">
+                            <img
+                                src="perpus.jpeg"
+                                alt="Rak buku di perpustakaan"
+                                loading="lazy">
+                            <span class="label-kategori">Pembelajaran</span>
+                        </div>
+                        <div class="isi-kartu-fasilitas">
+                            <h3>Perpustakaan</h3>
+                            <p>
+                                Mendukung kebiasaan membaca dan membantu
+                                siswa mencari sumber pengetahuan.
+                            </p>
+                         </div>
+                    </article>
+
+                    <article class="kartu-fasilitas"
+                             data-kategori="ibadah">
+                        <div class="gambar-fasilitas">
+                            <img
+                                src="aula dpn.jpeg"
+                                alt="Bangunan masjid untuk kegiatan ibadah"
+                                loading="lazy">
+                            <span class="label-kategori">Ibadah</span>
+                        </div>
+                        <div class="isi-kartu-fasilitas">
+                            <h3>Masjid atau Musala</h3>
+                            <p>
+                                Tempat melaksanakan ibadah serta
+                                membiasakan siswa menjaga adab dan
+                                kedisiplinan.
+                            </p>
+                        </div>
+                    </article>
+
+                    
+
+                    <article class="kartu-fasilitas"
+                             data-kategori="umum">
+                        <div class="gambar-fasilitas">
+                            <img
+                                src="aula.jpeg"
+                                alt="Ruang dalam gedung yang tertata rapi"
+                                loading="lazy">
+                            <span class="label-kategori">Fasilitas Umum</span>
+                        </div>
+                        <div class="isi-kartu-fasilitas">
+                            <h3>Ruang Kegiatan</h3>
+                            <p>
+                                Dapat digunakan untuk mendukung kegiatan
+                                organisasi, diskusi, dan aktivitas sekolah
+                                sesuai kebutuhan.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                
+           
+
+        <!-- Penutup -->
+        <section class="ajakan-fasilitas">
+            <div class="wadah isi-ajakan-fasilitas">
+                <div>
+                    <span class="label-bagian label-terang">
+                        KENALI SEKOLAH KAMI
+                    </span>
+                    <h2>Temukan Lingkungan Belajar yang Mendukung</h2>
+                    <p>
+                        Kenali lebih jauh profil dan kegiatan SMPIT Nur Hidayah.
+                    </p>
+                </div>
+                <a href="profil.html" class="tombol-ajakan-fasilitas">
+                    Lihat Profil Sekolah →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="kaki-sekolah">
+        <div class="wadah kisi-footer">
+            <div class="isi-footer">
+                <div class="logo-sekolah logo-footer">NH</div>
+                <h3>SMPIT Nur Hidayah</h3>
+                <p>
+                    Membangun generasi berilmu, berakhlak mulia,
+                    dan siap menghadapi masa depan.
+                </p>
+            </div>
+
+            <div class="isi-footer">
+                <h3>Navigasi</h3>
+                <a href="index.html">Beranda</a>
+                <a href="profil.html">Profil Sekolah</a>
+                <a href="fasilitas.html">Fasilitas</a>
+                <a href="kegiatan.html">Kegiatan</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+
+            <div class="isi-footer">
+                <h3>Kontak Sekolah</h3>
+                <p>Telepon: 812-2845-1684</p>
+                <p>Email: info@smpitnurhidayah.sch.id</p>
+                <p>
+                    Jl. Kahuripan Utara Raya, Kelurahan Sumber, Kecamatan Banjarsari, Kota Surakarta, Jawa Tengah 57138
+                </p>
+            </div>
+        </div>
+
+        <div class="bagian-hakcipta">
+            <div class="wadah hakcipta-dalam">
+                <p>
+                    © <span id="tahunSekarang"></span> SMPIT Nur Hidayah.
+                    Seluruh hak cipta dilindungi.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="tombol-atas" id="tombolAtas"
+            aria-label="Kembali ke atas">↑</button>
+
+    <script src="fungsi.js"></script>
+
+    <!-- Filter Fasilitas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tombolFilter = document.querySelectorAll(".tombol-filter");
+            const kartuFasilitas = document.querySelectorAll(".kartu-fasilitas");
+
+            tombolFilter.forEach(function (tombol) {
+                tombol.addEventListener("click", function () {
+                    const kategoriDipilih = tombol.dataset.filter;
+
+                    tombolFilter.forEach(function (item) {
+                        item.classList.remove("aktif");
+                        item.setAttribute("aria-pressed", "false");
+                    });
+
+                    tombol.classList.add("aktif");
+                    tombol.setAttribute("aria-pressed", "true");
+
+                    kartuFasilitas.forEach(function (kartu) {
+                        const kategoriKartu = kartu.dataset.kategori;
+                        const cocok = kategoriDipilih === "semua" ||
+                                      kategoriKartu === kategoriDipilih;
+
+                        kartu.hidden = !cocok;
+                    });
+                });
+            });
+
+            const tahun = document.getElementById("tahunSekarang");
+            if (tahun) {
+                tahun.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>

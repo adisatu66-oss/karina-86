@@ -1,0 +1,1073 @@
+
+/* =================================
+   PENGATURAN UMUM HALAMAN PROFIL
+================================= */
+:root {
+    --biru-utama: #2F39A9;
+    --biru-muda: #49A4BB;
+    --hijau-toska: #15D8B3;
+    --putih: #ffffff;
+    --latar: #f4f7ff;
+    --teks: #26304a;
+    --bayangan: 0 12px 30px rgba(47, 57, 169, 0.10);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--teks);
+    background: var(--latar);
+    line-height: 1.8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =================================
+   JUDUL SETIAP BAGIAN
+================================= */
+.judul-bagian {
+    color: var(--biru-utama);
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.judul-bagian::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: var(--hijau-toska);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teks-pembuka {
+    color: #667085;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+/* =================================
+   HERO PROFIL
+   Tambahkan class hero-profil pada
+   bagian pembuka di HTML
+================================= */
+.hero-profil {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+    color: var(--putih);
+    background: linear-gradient(
+        120deg,
+        var(--biru-utama),
+        var(--biru-muda)
+    );
+}
+
+.hero-profil::before,
+.hero-profil::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+    pointer-events: none;
+}
+
+.hero-profil::before {
+    width: 250px;
+    height: 250px;
+    top: -90px;
+    right: 5%;
+}
+
+.hero-profil::after {
+    width: 180px;
+    height: 180px;
+    bottom: -80px;
+    left: 5%;
+}
+
+.hero-profil h1 {
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.hero-profil p {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-profil .tombol-profil {
+    display: inline-block;
+    padding: 12px 24px;
+    color: var(--biru-utama);
+    background: var(--hijau-toska);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero-profil .tombol-profil:hover {
+    background: var(--putih);
+    transform: translateY(-3px);
+}
+
+/* =================================
+   BAGIAN SEJARAH SEKOLAH
+================================= */
+.bagian-sejarah {
+    padding: 75px 0;
+    background: var(--putih);
+}
+
+.foto-sejarah {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: var(--bayangan);
+    transition: transform 0.4s ease;
+}
+
+.foto-sejarah:hover {
+    transform: scale(1.02);
+}
+
+.konten-sejarah {
+    padding: 28px;
+    background: var(--latar);
+    border-radius: 20px;
+    border-left: 5px solid var(--hijau-toska);
+}
+
+/* =================================
+   KARTU VISI DAN MISI
+================================= */
+.bagian-visi-misi {
+    padding: 75px 0;
+    background: linear-gradient(
+        180deg,
+        #f4f7ff,
+        #eafafa
+    );
+}
+
+.kartu-visi-misi {
+    height: 100%;
+    padding: 30px;
+    background: var(--putih);
+    border-radius: 22px;
+    border: 1px solid #e8ebf8;
+    box-shadow: var(--bayangan);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.kartu-visi-misi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(47, 57, 169, 0.16);
+    border-color: var(--hijau-toska);
+}
+
+.ikon-visi-misi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    color: var(--biru-utama);
+    background: #dcfbf4;
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.kartu-visi-misi h3 {
+    color: var(--biru-utama);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.daftar-misi {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.daftar-misi li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.daftar-misi li::marker {
+    color: var(--biru-muda);
+}
+
+/* =================================
+   BAGIAN TENTANG KAMI
+================================= */
+.bagian-tentang {
+    padding: 75px 0;
+    background: var(--putih);
+}
+
+.kartu-tentang {
+    height: 100%;
+    padding: 25px;
+    border-radius: 18px;
+    background: #f7f9ff;
+    border-bottom: 4px solid var(--biru-muda);
+    transition: 0.3s ease;
+}
+
+.kartu-tentang:hover {
+    transform: translateY(-6px);
+    background: #e9fffa;
+    border-bottom-color: var(--hijau-toska);
+}
+
+/* =================================
+   TOMBOL DAN TAUTAN
+================================= */
+.tautan-profil {
+    color: var(--biru-utama);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tautan-profil:hover {
+    color: #087f72;
+}
+
+/* =================================
+   ANIMASI MASUK
+================================= */
+@keyframes muncul-naik {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-profil h1,
+.hero-profil p,
+.kartu-visi-misi,
+.konten-sejarah {
+    animation: muncul-naik 0.7s ease both;
+}
+
+/* =================================
+   RESPONSIF UNTUK HP
+================================= */
+@media (max-width: 768px) {
+    .hero-profil {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .bagian-sejarah,
+    .bagian-visi-misi,
+    .bagian-tentang {
+        padding: 48px 0;
+    }
+
+    .foto-sejarah {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .konten-sejarah,
+    .kartu-visi-misi {
+        padding: 22px;
+    }
+}
+
+/* Menghormati pengaturan pengurangan animasi */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== PERAPIAN HALAMAN PROFIL ===== */
+
+.bagian-profil {
+    padding: 75px 0;
+}
+
+.hero-profil {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+    color: white;
+    background: linear-gradient(135deg, #2F39A9, #49A4BB);
+}
+
+.isi-hero-profil {
+    position: relative;
+    z-index: 1;
+}
+
+.isi-hero-profil h2 {
+    margin: 15px 0;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 800;
+}
+
+.isi-hero-profil p {
+    max-width: 650px;
+    font-size: 17px;
+    color: #f0fbff;
+}
+
+.label-kecil {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #087f72;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-profil .label-kecil {
+    color: #15D8B3;
+}
+
+.jalur-halaman {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.jalur-halaman a {
+    color: #15D8B3;
+    text-decoration: none;
+}
+
+.jalur-halaman a:hover {
+    color: white;
+}
+
+/* Tentang Kami */
+
+.bagian-tentang {
+    background: #ffffff;
+}
+
+.kisi-tentang {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.gambar-tentang {
+    position: relative;
+}
+
+.gambar-tentang img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(47, 57, 169, 0.15);
+}
+
+.gambar-tentang > div {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background: #e5fbf6;
+    border-left: 5px solid #15D8B3;
+    border-radius: 12px;
+}
+
+.teks-tentang h2,
+.judul-bagian h2 {
+    color: #2F39A9;
+    font-size: clamp(25px, 3vw, 35px);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.teks-tentang p,
+.judul-bagian p {
+    color: #596579;
+}
+
+/* Nilai sekolah */
+
+.nilai-sekolah {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.nilai-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px;
+    background: #f4f7ff;
+    border-radius: 14px;
+    border-left: 4px solid #49A4BB;
+    transition: 0.3s ease;
+}
+
+.nilai-item:hover {
+    transform: translateX(5px);
+    background: #e5fbf6;
+    border-left-color: #15D8B3;
+}
+
+.ikon-nilai {
+    color: #2F39A9;
+    font-size: 25px;
+}
+
+.nilai-item h3 {
+    color: #2F39A9;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.nilai-item p {
+    margin: 0;
+}
+
+/* Sejarah */
+
+.bagian-sejarah {
+    background: #f3f6ff;
+}
+
+.judul-bagian {
+    margin-bottom: 30px;
+}
+
+.judul-bagian h2 {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.judul-bagian h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin-top: 12px;
+    background: #15D8B3;
+    border-radius: 10px;
+}
+
+.kartu-sejarah {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(47, 57, 169, 0.08);
+    border-top: 4px solid #49A4BB;
+}
+
+.ikon-sejarah {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    color: #2F39A9;
+    background: #e5fbf6;
+    border-radius: 16px;
+    font-size: 28px;
+}
+
+.kartu-sejarah h3 {
+    color: #2F39A9;
+    font-weight: 800;
+}
+
+.kartu-sejarah p {
+    color: #596579;
+    line-height: 1.9;
+}
+
+/* Visi dan misi */
+
+.bagian-visi {
+    color: white;
+    background: linear-gradient(135deg, #2F39A9, #414fbd);
+}
+
+.judul-terang h2,
+.judul-terang p {
+    color: white;
+}
+
+.kisi-visi-misi {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+}
+
+.kartu-visi,
+.kartu-misi {
+    padding: 30px;
+    color: #26304a;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.kartu-visi:hover,
+.kartu-misi:hover {
+    transform: translateY(-6px);
+}
+
+.kartu-visi h3,
+.kartu-misi h3 {
+    color: #2F39A9;
+    font-weight: 800;
+}
+
+.ikon-visi {
+    margin-bottom: 12px;
+    color: #087f72;
+    font-size: 32px;
+}
+
+.kartu-misi li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.catatan-visi {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #e7edff;
+}
+
+/* Nilai karakter */
+
+.bagian-karakter {
+    background: white;
+}
+
+.kisi-karakter {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.kartu-karakter {
+    position: relative;
+    padding: 25px 20px;
+    background: #f4f7ff;
+    border-radius: 18px;
+    border-bottom: 4px solid #49A4BB;
+    transition: 0.3s ease;
+}
+
+.kartu-karakter:hover {
+    transform: translateY(-7px);
+    background: #e5fbf6;
+    border-bottom-color: #15D8B3;
+}
+
+.kartu-karakter > span {
+    color: #49A4BB;
+    font-weight: 800;
+}
+
+.ikon-karakter {
+    margin: 12px 0;
+    color: #2F39A9;
+    font-size: 30px;
+}
+
+.kartu-karakter h3 {
+    color: #2F39A9;
+    font-weight: 800;
+}
+
+/* Ajakan */
+
+.ajakan-profil {
+    padding: 55px 0;
+    color: white;
+    background: linear-gradient(120deg, #49A4BB, #15D8B3);
+}
+
+.isi-ajakan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.isi-ajakan h2 {
+    font-weight: 800;
+}
+
+.isi-ajakan .label-kecil {
+    color: #2F39A9;
+}
+
+.tombol-ajakan {
+    flex-shrink: 0;
+    padding: 13px 22px;
+    color: white;
+    background: #2F39A9;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.tombol-ajakan:hover {
+    color: #2F39A9;
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* Tampilan HP */
+
+@media (max-width: 768px) {
+    .bagian-profil {
+        padding: 50px 0;
+    }
+
+    .hero-profil {
+        padding: 60px 0;
+    }
+
+    .kisi-tentang,
+    .kisi-visi-misi {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .gambar-tentang img {
+        height: 260px;
+    }
+
+    .kisi-karakter {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .kartu-sejarah {
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .isi-ajakan {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    .kisi-karakter {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Perbaikan menu Tentang Kami di header */
+.menu-turun {
+    position: relative;
+}
+
+.tombol-turun {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #2F39A9;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tombol-turun:hover,
+.menu-turun:focus-within .tombol-turun {
+    background: #e5fbf6;
+    color: #087f72;
+}
+
+.panah-turun {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.menu-turun:hover .panah-turun,
+.menu-turun:focus-within .panah-turun {
+    transform: rotate(180deg);
+}
+
+.isi-turun {
+    min-width: 220px;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #e8ebf8;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(47, 57, 169, 0.14);
+    z-index: 1000;
+}
+
+.isi-turun a {
+    display: block;
+    padding: 11px 14px;
+    color: #26304a;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.isi-turun a:hover,
+.isi-turun a.aktif {
+    color: #2F39A9;
+    background: #e5fbf6;
+}
+
+/* Pastikan menu tetap nyaman di layar kecil */
+@media (max-width: 768px) {
+    .tombol-turun {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .isi-turun {
+        width: 100%;
+        min-width: 0;
+        position: static;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+}
+/* Mengecilkan tulisan Tentang Kami */
+.tombol-turun {
+    font-size: 13px;
+    padding: 8px 10px;
+    font-weight: 600;
+}
+
+.panah-turun {
+    font-size: 12px;
+}
+/* Mengecilkan tulisan Profil dan Sambutan Kepala Sekolah */
+.isi-turun a {
+    font-size: 12px;
+    padding: 9px 12px;
+    font-weight: 500;
+}
+/* Merapikan identitas sekolah pada header */
+.identitas-sekolah {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.identitas-sekolah > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.identitas-sekolah h1 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #2F39A9;
+}
+
+.identitas-sekolah p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #49A4BB;
+}
+
+.logo-sekolah {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .identitas-sekolah {
+        gap: 8px;
+    }
+
+    .logo-sekolah {
+        width: 45px;
+        height: 45px;
+    }
+
+    .identitas-sekolah h1 {
+        font-size: 15px;
+    }
+
+    .identitas-sekolah p {
+        font-size: 10px;
+    }
+}
+
+/* =====================================
+   TEMA WARNA WEBSITE SMPIT NUR HIDAYAH
+   ===================================== */
+
+:root {
+    --biru-utama: #2F39A9;
+    --biru-muda: #49A4BB;
+    --toska: #15D8B3;
+    --toska-lembut: #E5FBF6;
+    --biru-lembut: #EEF0FF;
+    --putih: #FFFFFF;
+    --teks: #26304A;
+    --latar: #F7FAFF;
+    --bayangan: 0 10px 30px rgba(47, 57, 169, 0.12);
+}
+
+/* Latar semua halaman */
+body {
+    background: var(--latar);
+    color: var(--teks);
+}
+
+/* Header bagian atas */
+.kepala-atas {
+    background: linear-gradient(90deg, #2F39A9, #49A4BB, #15D8B3);
+    color: white;
+}
+
+/* Header utama */
+.kepala-utama {
+    background: linear-gradient(120deg, #FFFFFF, #EFFFFB);
+    border-bottom: 3px solid var(--toska);
+    box-shadow: 0 5px 20px rgba(47, 57, 169, 0.10);
+}
+
+/* Navigasi */
+.navigasi a,
+.tombol-turun {
+    transition: all 0.3s ease;
+}
+
+.navigasi a:hover,
+.tombol-turun:hover {
+    color: var(--biru-utama);
+    background: var(--toska-lembut);
+    border-radius: 10px;
+}
+
+/* Judul bagian */
+h2 {
+    color: var(--biru-utama);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--toska), var(--biru-muda));
+}
+
+/* Bagian hero dan banner */
+.hero,
+.hero-profil,
+.hero-fasilitas,
+.hero-kegiatan,
+.hero-prestasi,
+.hero-kontak,
+.hero-developer {
+    background: linear-gradient(
+        135deg,
+        rgba(47, 57, 169, 0.96),
+        rgba(73, 164, 187, 0.91),
+        rgba(21, 216, 179, 0.88)
+    );
+    color: white;
+}
+
+/* Kartu konten */
+.kartu,
+.kartu-sejarah,
+.kartu-visi,
+.kartu-misi,
+.kartu-fasilitas,
+.kartu-kegiatan,
+.kartu-prestasi,
+.kartu-berita {
+    background: white;
+    border: 1px solid #E4EAF8;
+    border-radius: 18px;
+    box-shadow: var(--bayangan);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu:hover,
+.kartu-sejarah:hover,
+.kartu-visi:hover,
+.kartu-misi:hover,
+.kartu-fasilitas:hover,
+.kartu-kegiatan:hover,
+.kartu-prestasi:hover,
+.kartu-berita:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(47, 57, 169, 0.18);
+}
+
+/* Tombol */
+button,
+.tombol,
+.tombol-utama,
+.tombol-cta {
+    transition: all 0.3s ease;
+}
+
+.tombol-utama,
+.tombol-cta {
+    background: linear-gradient(90deg, var(--biru-utama), var(--biru-muda));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+}
+
+.tombol-utama:hover,
+.tombol-cta:hover {
+    background: linear-gradient(90deg, #222B8C, #087F72);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(47, 57, 169, 0.2);
+}
+
+/* Gambar */
+img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+img:hover {
+    filter: saturate(1.12);
+}
+
+/* Bagian selang-seling */
+.bagian:nth-of-type(even),
+.bagian-profil:nth-of-type(even) {
+    background-color: #F0FBFA;
+}
+
+/* Statistik dan ajakan */
+.bagian-statistik,
+.statistik {
+    background: linear-gradient(135deg, #2F39A9, #49A4BB);
+    color: white;
+}
+
+.ajakan,
+.ajakan-profil {
+    background: linear-gradient(120deg, #E5FBF6, #EEF0FF);
+    border-radius: 22px;
+}
+
+/* Filter galeri */
+.filter button,
+.tombol-filter {
+    background: #EEF0FF;
+    color: var(--biru-utama);
+    border: 1px solid #D9DDF8;
+    border-radius: 25px;
+    padding: 9px 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.filter button:hover,
+.tombol-filter:hover,
+.filter button.aktif,
+.tombol-filter.aktif {
+    background: var(--biru-utama);
+    color: white;
+}
+
+/* Footer */
+footer,
+.kaki-halaman {
+    background: linear-gradient(135deg, #202878, #2F39A9, #246B83);
+    color: white;
+}
+
+footer a,
+.kaki-halaman a {
+    color: #BFF9EC;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+.kaki-halaman a:hover {
+    color: white;
+}
+
+/* Animasi saat halaman dimuat */
+@keyframes munculHalus {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: munculHalus 0.7s ease both;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .ajakan,
+    .ajakan-profil {
+        border-radius: 14px;
+    }
+
+    .tombol-utama,
+    .tombol-cta {
+        padding: 10px 17px;
+    }
+}

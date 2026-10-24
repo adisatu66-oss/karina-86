@@ -1,0 +1,1571 @@
+/* =========================================
+   KONTAK - SMPIT NUR HIDAYAH
+   Palet warna:
+   Biru utama   : #2F39A9
+   Biru muda    : #49A4BB
+   Hijau toska  : #15D8B3
+   ========================================= */
+
+/* PENGATURAN DASAR */
+:root {
+    --biru-utama: #2F39A9;
+    --biru-muda: #49A4BB;
+    --hijau-toska: #15D8B3;
+    --putih: #FFFFFF;
+    --abu-terang: #F5F7FB;
+    --abu-teks: #687386;
+    --teks-gelap: #202A44;
+    --bayangan: 0 12px 35px rgba(47, 57, 169, 0.09);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--teks-gelap);
+    background: var(--putih);
+}
+
+a {
+    text-decoration: none;
+}
+
+.wadah-kontak {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+/* =========================================
+   HEADER ATAS
+   ========================================= */
+
+.kepala-atas {
+    position: relative;
+    z-index: 1002;
+    background: var(--biru-utama);
+    color: var(--putih);
+}
+
+.kepala-atas-dalam {
+    width: min(1200px, 92%);
+    min-height: 42px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.label-berita {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.teks-berjalan {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9);
+    animation: gerak-teks-kontak 18s linear infinite;
+}
+
+@keyframes gerak-teks-kontak {
+    0% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(-15px);
+    }
+}
+
+.sosial {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.sosial a {
+    color: var(--putih);
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.sosial a:hover {
+    color: var(--hijau-toska);
+}
+
+/* =========================================
+   HEADER UTAMA DAN NAVIGASI
+   ========================================= */
+
+.kepala-utama {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 20px rgba(32, 42, 68, 0.06);
+    backdrop-filter: blur(12px);
+}
+
+.kepala-utama-dalam {
+    width: min(1200px, 92%);
+    min-height: 88px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.identitas-sekolah {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--teks-gelap);
+    flex-shrink: 0;
+}
+
+.logo-sekolah {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        var(--biru-utama),
+        var(--biru-muda)
+    );
+    color: var(--putih);
+    font-size: 21px;
+    font-weight: 800;
+    box-shadow: 0 6px 16px rgba(47, 57, 169, 0.2);
+}
+
+.teks-identitas h1 {
+    margin: 0;
+    color: var(--biru-utama);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.teks-identitas p {
+    margin: 4px 0 0;
+    color: var(--abu-teks);
+    font-size: 10px;
+}
+
+.navigasi {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.navigasi > a,
+.tautan-menu-turun {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+    color: #454E63;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navigasi > a::after,
+.tautan-menu-turun::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: var(--hijau-toska);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navigasi > a:hover,
+.navigasi > a.aktif,
+.tautan-menu-turun:hover {
+    color: var(--biru-utama);
+}
+
+.navigasi > a:hover::after,
+.navigasi > a.aktif::after,
+.tautan-menu-turun:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-turun {
+    position: relative;
+}
+
+.isi-turun {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -15px;
+    z-index: 1003;
+    min-width: 185px;
+    padding: 9px;
+    border: 1px solid #EDF0F7;
+    border-radius: 12px;
+    background: var(--putih);
+    box-shadow: var(--bayangan);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: 0.25s ease;
+}
+
+.menu-turun:hover .isi-turun,
+.menu-turun:focus-within .isi-turun {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.isi-turun a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--teks-gelap);
+    font-size: 12px;
+    transition: 0.2s ease;
+}
+
+.isi-turun a:hover {
+    color: var(--biru-utama);
+    background: #F0F3FF;
+}
+
+.tombol-menu {
+    display: none;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 10px;
+    background: #EDF2FF;
+    color: var(--biru-utama);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO KONTAK
+   ========================================= */
+
+.hero-kontak {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            100deg,
+            rgba(32, 41, 135, 0.94),
+            rgba(47, 57, 169, 0.79),
+            rgba(73, 164, 187, 0.62)
+        ),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85")
+        center 45% / cover no-repeat;
+}
+
+.lapisan-hero-kontak {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(21, 216, 179, 0.25),
+            transparent 32%
+        );
+}
+
+.isi-hero-kontak {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 90%);
+    margin: 0 auto;
+    padding: 75px 0;
+    color: var(--putih);
+    animation: muncul-kontak 0.8s ease both;
+}
+
+.label-hero-kontak {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.isi-hero-kontak h2 {
+    max-width: 680px;
+    margin: 22px 0 15px;
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.isi-hero-kontak p {
+    max-width: 600px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.tombol-hero-kontak {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 27px;
+    padding: 13px 22px;
+    border-radius: 9px;
+    background: var(--hijau-toska);
+    color: #133D54;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.tombol-hero-kontak:hover {
+    background: var(--putih);
+    color: var(--biru-utama);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   JUDUL DAN PENGANTAR
+   ========================================= */
+
+.pengantar-kontak {
+    padding: 70px 0 30px;
+    text-align: center;
+}
+
+.label-bagian-kontak {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--biru-muda);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.judul-bagian-kontak,
+.judul-seksi-kontak h2 {
+    margin: 0;
+    color: var(--biru-utama);
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.deskripsi-bagian-kontak {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: var(--abu-teks);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.bagian-informasi-kontak {
+    padding: 40px 0 85px;
+}
+
+.judul-seksi-kontak {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.judul-seksi-kontak > p {
+    max-width: 650px;
+    margin: 12px auto 0;
+    color: var(--abu-teks);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   KARTU INFORMASI KONTAK
+   ========================================= */
+
+.susunan-informasi-kontak {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.kartu-informasi-kontak {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    min-width: 0;
+    padding: 27px;
+    border: 1px solid #E8ECF5;
+    border-radius: 18px;
+    background: var(--putih);
+    box-shadow: 0 5px 22px rgba(32, 42, 68, 0.035);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.kartu-informasi-kontak:hover {
+    transform: translateY(-5px);
+    border-color: rgba(73, 164, 187, 0.55);
+    box-shadow: var(--bayangan);
+}
+
+.ikon-informasi-kontak {
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: #E9F8FA;
+    color: var(--biru-muda);
+    font-size: 23px;
+}
+
+.isi-informasi-kontak {
+    min-width: 0;
+}
+
+.isi-informasi-kontak h3 {
+    margin: 2px 0 10px;
+    color: var(--teks-gelap);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.isi-informasi-kontak p {
+    margin: 0;
+    overflow-wrap: anywhere;
+    color: var(--abu-teks);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.tautan-informasi-kontak {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 13px;
+    color: var(--biru-utama);
+    font-size: 11px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.tautan-informasi-kontak:hover {
+    color: #148D82;
+}
+
+/* =========================================
+   JAM OPERASIONAL
+   ========================================= */
+
+.bagian-jam-kontak {
+    padding: 75px 0;
+    background: var(--abu-terang);
+}
+
+.isi-jam-kontak {
+    padding: 38px;
+    border: 1px solid #E8ECF5;
+    border-radius: 20px;
+    background: var(--putih);
+    box-shadow: var(--bayangan);
+}
+
+.bagian-judul-jam {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.ikon-jam-kontak {
+    flex-shrink: 0;
+    width: 62px;
+    height: 62px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    background: #E6F8F5;
+    color: #139D91;
+    font-size: 27px;
+}
+
+.bagian-judul-jam .label-bagian-kontak {
+    margin-bottom: 5px;
+}
+
+.bagian-judul-jam h2 {
+    margin: 0;
+    color: var(--biru-utama);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.bagian-judul-jam p {
+    margin: 7px 0 0;
+    color: var(--abu-teks);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.daftar-jam-kontak {
+    border-top: 1px solid #E9EDF5;
+}
+
+.baris-jam-kontak {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 17px 4px;
+    border-bottom: 1px solid #E9EDF5;
+    font-size: 12px;
+}
+
+.baris-jam-kontak span {
+    color: var(--abu-teks);
+}
+
+.baris-jam-kontak span i {
+    margin-right: 8px;
+    color: var(--biru-muda);
+}
+
+.baris-jam-kontak strong {
+    color: var(--teks-gelap);
+    font-weight: 700;
+    text-align: right;
+}
+
+.catatan-jam-kontak {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 22px 0 0;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: #FFF8E8;
+    color: #846623;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.catatan-jam-kontak i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* =========================================
+   GOOGLE MAPS
+   ========================================= */
+
+.bagian-peta-kontak {
+    padding: 85px 0;
+}
+
+.bingkai-peta-kontak {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    border: 5px solid var(--putih);
+    border-radius: 20px;
+    background: #E8EEF3;
+    box-shadow: var(--bayangan);
+}
+
+.bingkai-peta-kontak iframe {
+    display: block;
+    width: 100%;
+    height: 430px;
+    border: 0;
+}
+
+.catatan-peta-kontak {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #E5EDF5;
+    border-radius: 14px;
+    background: #FAFCFF;
+}
+
+.catatan-peta-kontak > i {
+    flex-shrink: 0;
+    color: var(--biru-muda);
+    font-size: 24px;
+}
+
+.catatan-peta-kontak p {
+    flex: 1;
+    margin: 0;
+    color: var(--abu-teks);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.tombol-peta-kontak {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 12px 16px;
+    border-radius: 9px;
+    background: var(--biru-utama);
+    color: var(--putih);
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.tombol-peta-kontak:hover {
+    background: var(--biru-muda);
+    color: var(--putih);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   AJAKAN MENGHUBUNGI SEKOLAH
+   ========================================= */
+
+.ajakan-kontak {
+    padding: 62px 0;
+    background: linear-gradient(
+        115deg,
+        var(--biru-utama),
+        var(--biru-muda)
+    );
+}
+
+.isi-ajakan-kontak {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.isi-ajakan-kontak > div > span {
+    color: var(--hijau-toska);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.isi-ajakan-kontak h2 {
+    margin: 10px 0;
+    color: var(--putih);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+}
+
+.isi-ajakan-kontak p {
+    max-width: 570px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.83);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.tombol-whatsapp-kontak {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    padding: 15px 21px;
+    border-radius: 10px;
+    background: var(--hijau-toska);
+    color: #103D49;
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.tombol-whatsapp-kontak i {
+    font-size: 19px;
+}
+
+.tombol-whatsapp-kontak:hover {
+    background: var(--putih);
+    color: #14866F;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.kaki-kontak {
+    background: #172144;
+    color: var(--putih);
+}
+
+.isi-kaki-kontak {
+    display: grid;
+    grid-template-columns: 1.25fr 0.7fr 1fr;
+    gap: 55px;
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+.identitas-kaki-kontak {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-kaki-kontak {
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: linear-gradient(
+        135deg,
+        var(--biru-muda),
+        var(--hijau-toska)
+    );
+    color: #173148;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.identitas-kaki-kontak h2 {
+    margin: 0;
+    color: var(--putih);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.identitas-kaki-kontak p {
+    margin: 5px 0 0;
+    color: #BAC8E3;
+    font-size: 10px;
+}
+
+.deskripsi-kaki-kontak {
+    margin: 20px 0 0;
+    color: #BAC8E3;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.kolom-kaki-kontak h3 {
+    margin: 5px 0 20px;
+    color: var(--putih);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.kolom-kaki-kontak > a {
+    display: block;
+    width: fit-content;
+    margin-bottom: 12px;
+    color: #BAC8E3;
+    font-size: 11px;
+    transition: color 0.2s ease;
+}
+
+.kolom-kaki-kontak > a:hover {
+    color: var(--hijau-toska);
+}
+
+.kolom-kaki-kontak > p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+    color: #BAC8E3;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.kolom-kaki-kontak > p i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--hijau-toska);
+}
+
+.bagian-hak-cipta-kontak {
+    padding: 20px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.bagian-hak-cipta-kontak p {
+    margin: 0;
+    color: #AAB8D5;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   TOMBOL KEMBALI KE ATAS
+   ========================================= */
+
+.tombol-atas-kontak {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 13px;
+    background: var(--biru-utama);
+    color: var(--putih);
+    font-size: 20px;
+    box-shadow: 0 5px 20px rgba(47, 57, 169, 0.25);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: 0.3s ease;
+}
+
+.tombol-atas-kontak.muncul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.tombol-atas-kontak:hover {
+    background: var(--biru-muda);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   ANIMASI
+   ========================================= */
+
+@keyframes muncul-kontak {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+    .kepala-utama-dalam {
+        gap: 15px;
+    }
+
+    .navigasi {
+        gap: 14px;
+    }
+
+    .navigasi > a,
+    .tautan-menu-turun {
+        font-size: 11px;
+    }
+
+    .teks-identitas h1 {
+        font-size: 15px;
+    }
+
+    .isi-kaki-kontak {
+        gap: 30px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE HP DAN TABLET KECIL
+   ========================================= */
+
+@media (max-width: 760px) {
+    .kepala-atas-dalam {
+        gap: 10px;
+    }
+
+    .label-berita {
+        font-size: 9px;
+    }
+
+    .teks-berjalan {
+        font-size: 10px;
+    }
+
+    .sosial {
+        gap: 8px;
+    }
+
+    .sosial a {
+        font-size: 13px;
+    }
+
+    .kepala-utama-dalam {
+        position: relative;
+        min-height: 76px;
+    }
+
+    .logo-sekolah {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        font-size: 19px;
+    }
+
+    .teks-identitas h1 {
+        font-size: 14px;
+    }
+
+    .teks-identitas p {
+        font-size: 9px;
+    }
+
+    .tombol-menu {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .navigasi {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        z-index: 1005;
+        display: none;
+        align-items: stretch;
+        gap: 3px;
+        padding: 15px;
+        border: 1px solid #E8ECF5;
+        border-radius: 0 0 15px 15px;
+        background: var(--putih);
+        box-shadow: var(--bayangan);
+    }
+
+    .navigasi.buka {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigasi > a,
+    .tautan-menu-turun {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+
+    .navigasi > a:hover,
+    .navigasi > a.aktif,
+    .tautan-menu-turun:hover {
+        background: #F0F3FF;
+    }
+
+    .navigasi > a::after,
+    .tautan-menu-turun::after {
+        display: none;
+    }
+
+    .menu-turun {
+        width: 100%;
+    }
+
+    .tautan-menu-turun {
+        justify-content: space-between;
+    }
+
+    .isi-turun {
+        position: static;
+        display: none;
+        min-width: unset;
+        margin: 0 0 5px 10px;
+        padding: 5px;
+        border: 0;
+        background: #F7F9FF;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .menu-turun:hover .isi-turun,
+    .menu-turun:focus-within .isi-turun {
+        display: block;
+    }
+
+    .hero-kontak {
+        min-height: 370px;
+        background-position: center;
+    }
+
+    .isi-hero-kontak {
+        padding: 60px 0;
+    }
+
+    .isi-hero-kontak h2 {
+        font-size: 34px;
+    }
+
+    .isi-hero-kontak p {
+        font-size: 12px;
+    }
+
+    .pengantar-kontak {
+        padding-top: 55px;
+    }
+
+    .bagian-informasi-kontak,
+    .bagian-peta-kontak {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .susunan-informasi-kontak {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .kartu-informasi-kontak {
+        padding: 23px;
+    }
+
+    .bagian-jam-kontak {
+        padding: 55px 0;
+    }
+
+    .isi-jam-kontak {
+        padding: 25px;
+    }
+
+    .bingkai-peta-kontak iframe {
+        height: 350px;
+    }
+
+    .catatan-peta-kontak {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .catatan-peta-kontak p {
+        flex-basis: calc(100% - 40px);
+    }
+
+    .tombol-peta-kontak {
+        margin-left: 37px;
+    }
+
+    .isi-ajakan-kontak {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .isi-kaki-kontak {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .tentang-kaki-kontak {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================
+   RESPONSIVE HP KECIL
+   ========================================= */
+
+@media (max-width: 480px) {
+    .kepala-atas-dalam {
+        width: 94%;
+        min-height: 38px;
+        gap: 7px;
+    }
+
+    .label-berita {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .teks-berjalan {
+        font-size: 9px;
+    }
+
+    .sosial {
+        gap: 6px;
+    }
+
+    .sosial a {
+        font-size: 11px;
+    }
+
+    .kepala-utama-dalam {
+        width: 92%;
+    }
+
+    .identitas-sekolah {
+        gap: 8px;
+    }
+
+    .logo-sekolah {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .teks-identitas h1 {
+        font-size: 12px;
+    }
+
+    .teks-identitas p {
+        font-size: 8px;
+    }
+
+    .tombol-menu {
+        width: 39px;
+        height: 39px;
+        font-size: 24px;
+    }
+
+    .hero-kontak {
+        min-height: 350px;
+    }
+
+    .isi-hero-kontak h2 {
+        font-size: 29px;
+    }
+
+    .isi-hero-kontak p {
+        font-size: 11px;
+    }
+
+    .label-hero-kontak {
+        font-size: 9px;
+    }
+
+    .tombol-hero-kontak {
+        padding: 12px 16px;
+        font-size: 11px;
+    }
+
+    .judul-bagian-kontak,
+    .judul-seksi-kontak h2 {
+        font-size: 23px;
+    }
+
+    .deskripsi-bagian-kontak,
+    .judul-seksi-kontak > p {
+        font-size: 11px;
+    }
+
+    .kartu-informasi-kontak {
+        gap: 13px;
+        padding: 19px;
+    }
+
+    .ikon-informasi-kontak {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .isi-informasi-kontak h3 {
+        font-size: 13px;
+    }
+
+    .isi-informasi-kontak p {
+        font-size: 11px;
+    }
+
+    .tautan-informasi-kontak {
+        font-size: 10px;
+    }
+
+    .isi-jam-kontak {
+        padding: 19px;
+    }
+
+    .bagian-judul-jam {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ikon-jam-kontak {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        font-size: 22px;
+    }
+
+    .bagian-judul-jam h2 {
+        font-size: 21px;
+    }
+
+    .bagian-judul-jam p {
+        font-size: 10px;
+    }
+
+    .baris-jam-kontak {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+        font-size: 11px;
+    }
+
+    .baris-jam-kontak strong {
+        padding-left: 22px;
+        text-align: left;
+    }
+
+    .catatan-jam-kontak {
+        font-size: 10px;
+    }
+
+    .bingkai-peta-kontak {
+        min-height: 300px;
+        border-width: 3px;
+        border-radius: 14px;
+    }
+
+    .bingkai-peta-kontak iframe {
+        height: 300px;
+    }
+
+    .catatan-peta-kontak {
+        padding: 15px;
+    }
+
+    .catatan-peta-kontak p {
+        font-size: 10px;
+    }
+
+    .tombol-peta-kontak {
+        margin-left: 0;
+        padding: 11px 13px;
+        font-size: 10px;
+    }
+
+    .ajakan-kontak {
+        padding: 45px 0;
+    }
+
+    .isi-ajakan-kontak h2 {
+        font-size: 24px;
+    }
+
+    .isi-ajakan-kontak p {
+        font-size: 11px;
+    }
+
+    .tombol-whatsapp-kontak {
+        padding: 13px 16px;
+        font-size: 11px;
+    }
+
+    .isi-kaki-kontak {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .tentang-kaki-kontak {
+        grid-column: auto;
+    }
+
+    .kolom-kaki-kontak h3 {
+        margin-bottom: 15px;
+    }
+
+    .tombol-atas-kontak {
+        right: 15px;
+        bottom: 15px;
+        width: 41px;
+        height: 41px;
+    }
+}
+
+/* Mengurangi animasi bagi pengguna yang memilih gerakan minimal */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================
+   TEMA WARNA WEBSITE SMPIT NUR HIDAYAH
+   ===================================== */
+
+:root {
+    --biru-utama: #2F39A9;
+    --biru-muda: #49A4BB;
+    --toska: #15D8B3;
+    --toska-lembut: #E5FBF6;
+    --biru-lembut: #EEF0FF;
+    --putih: #FFFFFF;
+    --teks: #26304A;
+    --latar: #F7FAFF;
+    --bayangan: 0 10px 30px rgba(47, 57, 169, 0.12);
+}
+
+/* Latar semua halaman */
+body {
+    background: var(--latar);
+    color: var(--teks);
+}
+
+/* Header bagian atas */
+.kepala-atas {
+    background: linear-gradient(90deg, #2F39A9, #49A4BB, #15D8B3);
+    color: white;
+}
+
+/* Header utama */
+.kepala-utama {
+    background: linear-gradient(120deg, #FFFFFF, #EFFFFB);
+    border-bottom: 3px solid var(--toska);
+    box-shadow: 0 5px 20px rgba(47, 57, 169, 0.10);
+}
+
+/* Navigasi */
+.navigasi a,
+.tombol-turun {
+    transition: all 0.3s ease;
+}
+
+.navigasi a:hover,
+.tombol-turun:hover {
+    color: var(--biru-utama);
+    background: var(--toska-lembut);
+    border-radius: 10px;
+}
+
+/* Judul bagian */
+h2 {
+    color: var(--biru-utama);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--toska), var(--biru-muda));
+}
+
+/* Bagian hero dan banner */
+.hero,
+.hero-profil,
+.hero-fasilitas,
+.hero-kegiatan,
+.hero-prestasi,
+.hero-kontak,
+.hero-developer {
+    background: linear-gradient(
+        135deg,
+        rgba(47, 57, 169, 0.96),
+        rgba(73, 164, 187, 0.91),
+        rgba(21, 216, 179, 0.88)
+    );
+    color: white;
+}
+
+/* Kartu konten */
+.kartu,
+.kartu-sejarah,
+.kartu-visi,
+.kartu-misi,
+.kartu-fasilitas,
+.kartu-kegiatan,
+.kartu-prestasi,
+.kartu-berita {
+    background: white;
+    border: 1px solid #E4EAF8;
+    border-radius: 18px;
+    box-shadow: var(--bayangan);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu:hover,
+.kartu-sejarah:hover,
+.kartu-visi:hover,
+.kartu-misi:hover,
+.kartu-fasilitas:hover,
+.kartu-kegiatan:hover,
+.kartu-prestasi:hover,
+.kartu-berita:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(47, 57, 169, 0.18);
+}
+
+/* Tombol */
+button,
+.tombol,
+.tombol-utama,
+.tombol-cta {
+    transition: all 0.3s ease;
+}
+
+.tombol-utama,
+.tombol-cta {
+    background: linear-gradient(90deg, var(--biru-utama), var(--biru-muda));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+}
+
+.tombol-utama:hover,
+.tombol-cta:hover {
+    background: linear-gradient(90deg, #222B8C, #087F72);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(47, 57, 169, 0.2);
+}
+
+/* Gambar */
+img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+img:hover {
+    filter: saturate(1.12);
+}
+
+/* Bagian selang-seling */
+.bagian:nth-of-type(even),
+.bagian-profil:nth-of-type(even) {
+    background-color: #F0FBFA;
+}
+
+/* Statistik dan ajakan */
+.bagian-statistik,
+.statistik {
+    background: linear-gradient(135deg, #2F39A9, #49A4BB);
+    color: white;
+}
+
+.ajakan,
+.ajakan-profil {
+    background: linear-gradient(120deg, #E5FBF6, #EEF0FF);
+    border-radius: 22px;
+}
+
+/* Filter galeri */
+.filter button,
+.tombol-filter {
+    background: #EEF0FF;
+    color: var(--biru-utama);
+    border: 1px solid #D9DDF8;
+    border-radius: 25px;
+    padding: 9px 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.filter button:hover,
+.tombol-filter:hover,
+.filter button.aktif,
+.tombol-filter.aktif {
+    background: var(--biru-utama);
+    color: white;
+}
+
+/* Footer */
+footer,
+.kaki-halaman {
+    background: linear-gradient(135deg, #202878, #2F39A9, #246B83);
+    color: white;
+}
+
+footer a,
+.kaki-halaman a {
+    color: #BFF9EC;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+.kaki-halaman a:hover {
+    color: white;
+}
+
+/* Animasi saat halaman dimuat */
+@keyframes munculHalus {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: munculHalus 0.7s ease both;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .ajakan,
+    .ajakan-profil {
+        border-radius: 14px;
+    }
+
+    .tombol-utama,
+    .tombol-cta {
+        padding: 10px 17px;
+    }
+}
